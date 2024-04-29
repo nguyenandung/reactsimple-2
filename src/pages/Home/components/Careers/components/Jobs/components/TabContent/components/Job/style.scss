@@ -1,0 +1,85 @@
+.job-item {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #dddddd;
+  &__left {
+    .title {
+      color: #10284a;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      margin: 0;
+    }
+    .dead__time,
+    .form__work {
+      display: flex;
+      align-items: center;
+      &-content {
+        margin-left: 8px;
+        color: #989898;
+      }
+    }
+    .salary {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #818181;
+    }
+  }
+  &__right {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    &__wrap {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .job-item-right__details {
+      color: var(--primary);
+      display: block;
+      text-align: center;
+      text-decoration: underline;
+      padding: 8px 32px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .job-item-right__apply {
+      width: 15rem;
+      padding: 0;
+      min-width: unset;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .job-item {
+    &__right {
+      &__wrap {
+        justify-content: start;
+        flex-direction: row;
+        width: 100%;
+        flex-direction: row-reverse;
+      }
+      .job-item-right__apply {
+        min-width: unset;
+        padding: unset;
+        width: 50%;
+        margin-left: 8px;
+        span:nth-child(1) {
+          transform: translateY(-2px);
+        }
+      }
+      .job-item-right__details {
+        border: 1px solid #dddddd;
+        text-decoration: unset;
+        margin-right: 8px;
+        width: 50%;
+        padding: 8px 0;
+      }
+    }
+  }
+}

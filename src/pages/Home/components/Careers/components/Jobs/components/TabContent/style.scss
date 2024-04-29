@@ -1,0 +1,130 @@
+.tab__content {
+  max-height: 420px;
+  min-height: 420px;
+  padding-right: 24px;
+  overflow-y: auto;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #e3eef8;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: var(--primary);
+  }
+
+  .job-item--wrapper {
+    margin-bottom: 16px;
+  }
+
+  .job-item--wrapper:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.job-details-modal {
+  height: 92vh;
+  overflow: hidden;
+  flex-direction: column;
+  transform: translateY(-50%);
+  top: 50%;
+  .ant-modal,
+  .ant-modal-content,
+  .ant-modal-body {
+    height: 100%;
+  }
+  .ant-modal-content {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .ant-modal-close {
+    .ant-modal-close-x {
+      height: unset;
+      width: unset;
+      line-height: unset;
+      padding: 8px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+  &__header,
+  &__main {
+    padding: 16px 16px 16px 32px;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  &__header {
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__main {
+    height: 84%;
+    border-bottom-left-radius: 8px;
+    .job-details-modal-main__wrap {
+      overflow: auto;
+      height: 100%;
+      padding-right: 48px;
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #e3eef8;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background: var(--primary);
+      }
+      p {
+        strong {
+          color: var(--primary);
+        }
+      }
+      ul {
+        list-style: inside;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .tab__content {
+    overflow-y: unset;
+    padding-right: 0;
+  }
+  .job-details-modal {
+    .ant-modal-body {
+      padding: 24px 0;
+    }
+    &__header,
+    &__main {
+      padding: 16px;
+    }
+    &__header {
+      .modal-header__name {
+        flex: 1;
+        font-size: 18px;
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .tab__content {
+    max-height: unset;
+    min-height: unset;
+  }
+}

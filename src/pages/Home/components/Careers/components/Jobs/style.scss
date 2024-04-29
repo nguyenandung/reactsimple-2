@@ -1,0 +1,39 @@
+#jobs {
+  .ant-tabs {
+    .ant-tabs-content-holder {
+      border: none;
+      padding-top: 8px;
+    }
+    .ant-tabs-ink-bar {
+      display: none;
+    }
+    .ant-tabs-nav {
+      &::before,
+      &::after {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #jobs {
+    .ant-tabs {
+      .ant-tabs-content-holder {
+        padding-top: 0;
+      }
+      .ant-tabs-nav-list {
+        overflow-x: visible;
+        .ant-tabs-tab {
+          padding: 0 0 12px;
+          margin-right: 16px;
+          .tab__label {
+            .tab__label__title {
+              margin: 0 16px 0 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

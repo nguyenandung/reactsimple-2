@@ -1,0 +1,72 @@
+#home {
+  min-height: 100vh;
+  .home__component {
+    margin-bottom: 78px;
+  }
+  .section {
+    &-header__title,
+    &-header__description {
+      text-align: center;
+    }
+    &-header__description {
+      margin-top: 16px;
+      font-size: 18px;
+      line-height: 24px;
+      color: var(--text-color);
+    }
+    &-header__title {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+      color: var(--primary);
+    }
+    &-header {
+      margin-bottom: 36px;
+    }
+  }
+  .home__layout {
+    padding: 0 21rem;
+    .careers,
+    .mission,
+    .blogs {
+      &__header {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #home {
+    .home__component {
+      margin-bottom: 46px;
+    }
+    .home__layout {
+      padding: 0 16px;
+    }
+    .section {
+      &-header__description {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #home {
+    .home__component {
+      margin-bottom: 46px;
+    }
+    .section {
+      &-header__description {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      &-header__title {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }
+}

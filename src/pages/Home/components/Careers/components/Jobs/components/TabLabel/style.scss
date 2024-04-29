@@ -1,0 +1,49 @@
+.tab__label {
+  width: 240px;
+  padding: 10px 16px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  border: 1px solid #dddddd;
+  background-color: #fff;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  &__title {
+    margin-left: 12px;
+    flex: 1;
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &__quantity {
+    padding: 10px;
+    width: 36px;
+  }
+}
+
+.tab__label > svg {
+  color: red;
+}
+
+.ant-tabs-tab-active {
+  .tab__label {
+    background: #e3eef8;
+    color: var(--primary);
+    border: 1px solid transparent;
+    &__title {
+      font-weight: 600;
+    }
+    &__quantity {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      background: #fff;
+      border-radius: 50%;
+    }
+    svg path {
+      fill: var(--primary);
+    }
+  }
+}

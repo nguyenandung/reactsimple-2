@@ -1,0 +1,23 @@
+#mission {
+  padding: 48px 0;
+  margin: -48px 0 0;
+  .mission__content {
+    .ant-col:nth-child(2n) {
+      .mission-item {
+        background-color: #10284a;
+      }
+    }
+  }
+  .mission-header {
+    &__title,
+    &__description {
+      text-align: left !important;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #mission {
+    padding: 48px 0 0;
+  }
+}

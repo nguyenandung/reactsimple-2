@@ -1,0 +1,15 @@
+#default-layout {
+  position: relative;
+  .default-layout__main {
+    margin: var(--default-layout-header-height) 0 48px;
+    min-height: calc(100vh - var(--default-layout-header-height));
+  }
+}
+
+@media (max-width: 576px) {
+  #default-layout {
+    .default-layout__main__contacts {
+      min-height: unset;
+    }
+  }
+}

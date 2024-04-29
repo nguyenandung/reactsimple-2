@@ -1,0 +1,108 @@
+.blog-details {
+  padding: 36px 21rem 0;
+  &__main {
+    .ant-breadcrumb {
+      .ant-breadcrumb-link {
+        font-weight: 600;
+        line-height: 17px;
+      }
+    }
+    .blog-details-main__time {
+      display: flex;
+      align-items: center;
+      color: var(--gray);
+    }
+    .blog-details-main__title {
+      margin: 24px 0 12px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+      color: rgba(0, 0, 0, 0.85);
+    }
+    .blog-details-main__time {
+      .blog-details-main-time__value {
+        margin-left: 8px;
+        font-weight: 500;
+      }
+    }
+    .blog-details-main__relate {
+      h2 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+      }
+      .relate__main {
+        margin-top: 24px;
+      }
+      .relate__more {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 36px;
+      }
+    }
+    .blog-details-main__content {
+      margin: 24px 0;
+      p,
+      li {
+        font-size: 16px;
+      }
+      p {
+        margin-bottom: 14px;
+      }
+      img {
+        width: 100%;
+        border-radius: 8px;
+      }
+    }
+  }
+  &__prefer {
+    h2 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+    }
+    .blogs-details-prefer__content {
+      margin-top: 24px;
+      .blog-prefer__item {
+        display: block;
+        padding-bottom: 16px;
+        .blog-prefer-item__wrap {
+          margin-bottom: 16px;
+        }
+        .ant-row {
+          padding-bottom: 16px;
+        }
+        .blog-prefer__item:last-child {
+          .ant-row {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .blog-details {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-details {
+    padding: 32px 16px;
+    &__main {
+      .blog-details-main__title {
+        margin: 16px 0;
+      }
+      .blog-details-main__relate {
+        .relate__more {
+          margin-top: 50px;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

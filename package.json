@@ -1,0 +1,69 @@
+{
+  "name": "exsoft-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^6.4.5",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.0",
+    "antd": "^4.23.6",
+    "axios": "^1.1.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "classnames": "^2.3.2",
+    "craco-less": "^2.0.0",
+    "env-cmd": "^10.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "query-string": "^7.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.4.2",
+    "react-router-dom": "^6.4.2",
+    "react-scripts": "5.0.1",
+    "sass": "^1.55.0",
+    "typescript": "^4.8.4",
+    "web-vitals": "^2.1.0"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "deploy": "rm -rf build && env-cmd -f .env.development craco build && scp -r ./build/. frontend@103.101.162.135:/var/www/html/exsoft",
+    "deploy-production": "rm -rf build && env-cmd -f .env.production craco build && scp -r ./build/. bbu@103.124.95.197:/var/www/html/web-cong-ty",
+    "test": "craco test",
+    "eject": "craco eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.186",
+    "customize-cra": "^1.0.0",
+    "react-app-rewired": "^2.2.1"
+  }
+}
